@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 	gulp.src('./assets/styles/style.scss') // файл, который обрабатываем
 		.pipe(sass().on('error', sass.logError)) // конвертируем sass в css
 		.pipe(csso()) // минифицируем css, полученный на предыдущем шаге
-		.pipe(gulp.dest('./public/css/')); // результат пишем по указанному адресу
+		.pipe(gulp.dest('./assets/css/')); // результат пишем по указанному адресу
 });
 
 // Задача "js". Запускается командой "gulp js"
@@ -37,14 +37,14 @@ gulp.task('js', function () {
 		]) // файлы, которые обрабатываем
 		.pipe(concat('min.js')) // склеиваем все JS
 		// .pipe(uglify()) // получившуюся "портянку" минифицируем 
-		.pipe(gulp.dest('./public/js/')) // результат пишем по указанному адресу
+		.pipe(gulp.dest('./assets/js/')) // результат пишем по указанному адресу
 });
 
 // Задача "images". Запускается командой "gulp images"
 gulp.task('images', function () {
 	gulp.src('.assets/images/**/*') // берем любые файлы в папке и ее подпапках
 		.pipe(imagemin()) // оптимизируем изображения для веба
-		.pipe(gulp.dest('./public/images/')) // результат пишем по указанному адресу
+		.pipe(gulp.dest('./assets/img/')) // результат пишем по указанному адресу
 
 });
 

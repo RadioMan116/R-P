@@ -35,7 +35,7 @@ img {
 	height: 100vh;
 	background-attachment: scroll;
 	position: relative;
-	background-image: url("images/54dbc45ee4cfbf39e912.jpg");
+	background-image: url("../images/54dbc45ee4cfbf39e912.jpg");
 	transform: translateY(0px);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -191,29 +191,29 @@ img {
 		}
 
 		&:nth-of-type(1) {
-			background-image: url('images/left-2.jpg');
+			background-image: url('../images/left-2.jpg');
 		}
 
 		&:nth-of-type(2) {
-			background-image: url('images/left-1.jpg');
+			background-image: url('../images/left-1.jpg');
 		}
 
 		&:nth-of-type(3) {
-			background-image: url('images/left-3.jpg');
+			background-image: url('../images/left-3.jpg');
 		}
 	}
 
 	.swiper-pagination {}
 
 	.swiper-button-next {
-		background: url('images/aboutSliderControls_white.png');
+		background: url('../images/aboutSliderControls_white.png');
 		background-position: left bottom;
 		height: 34px;
 		width: 21px;
 	}
 
 	.swiper-button-prev {
-		background: url('images/aboutSliderControls_white.png') no-repeat;
+		background: url('../images/aboutSliderControls_white.png') no-repeat;
 		height: 34px;
 		width: 21px;
 	}
@@ -333,7 +333,7 @@ img {
 
 			&:nth-of-type(1) {
 				.services__children-photo {
-					background-image: url('images/remont-kvartiry2.jpg');
+					background-image: url('../images/remont-kvartiry2.jpg');
 				}
 
 			}
