@@ -1,6 +1,6 @@
 /*
- * 
- * Определяем переменные 
+ *
+ * Определяем переменные
  *
  */
 
@@ -12,14 +12,14 @@ var gulp = require('gulp'), // Сообственно Gulp JS
 	sass = require('gulp-sass'); // Конверстация SASS (SCSS) в CSS
 
 /*
- * 
- * Создаем задачи (таски) 
+ *
+ * Создаем задачи (таски)
  *
  */
 
 // Задача "sass". Запускается командой "gulp sass"
 gulp.task('sass', function () {
-	gulp.src('./assets/styles/style.scss') // файл, который обрабатываем
+	gulp.src('./assets/styles/**/*') // файл, который обрабатываем
 		.pipe(sass().on('error', sass.logError)) // конвертируем sass в css
 		.pipe(csso()) // минифицируем css, полученный на предыдущем шаге
 		.pipe(gulp.dest('./assets/css/')); // результат пишем по указанному адресу
@@ -36,7 +36,7 @@ gulp.task('js', function () {
 			'./assets/javascripts/*.js'
 		]) // файлы, которые обрабатываем
 		.pipe(concat('min.js')) // склеиваем все JS
-		// .pipe(uglify()) // получившуюся "портянку" минифицируем 
+		// .pipe(uglify()) // получившуюся "портянку" минифицируем
 		.pipe(gulp.dest('./assets/js/')) // результат пишем по указанному адресу
 });
 

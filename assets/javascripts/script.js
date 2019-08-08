@@ -9,6 +9,10 @@ $(document).ready(function () {
 		}, 1500);
 	});
 
+	$("#call").on("click", function (event) {
+		document.getElementById("myForm").style.display = "block";
+	});
+
 	var swiper = new Swiper('.right .swiper-container', {
 		slidesPerView: 1,
 		spaceBetween: 0,
@@ -32,6 +36,31 @@ $(document).ready(function () {
 			nextEl: '.work-examples .swiper-button-next',
 			prevEl: '.work-examples .swiper-button-prev',
 		},
+	});
+
+	$('#myForm form').on('submit', function () {
+
+		var _form = $(this);
+
+
+		$.post('/send.php', _form.serialize(), function (data) {
+
+
+			if (data.success) {
+
+				alert('OK');
+
+				_form.find('input[type="text"],input[type="tel"]').val('');
+
+			} else {
+
+				alert('ERROR');
+
+			}
+
+		}, 'json');
+
+		return false;
 	});
 
 });

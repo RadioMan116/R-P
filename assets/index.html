@@ -10,7 +10,7 @@
 	<meta property="og:site_name" content="Руки-молодцы" />
 	<meta name="description" content="Ремонт под ключ, отделка домов и квартир в Казани">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="styles/jquery.fancybox.min.css">
+	<!-- <link rel="stylesheet" href="styles/jquery.fancybox.min.css"> -->
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<title>Руки-молодцы</title>
 </head>
@@ -28,7 +28,7 @@
 			</h3>
 			<h1 class="title">Руки-молодцы</h1>
 			<a href="#down">
-				<div class="button-call">Заказать звонок</div>
+				<div id="call" class="button-call">Заказать звонок</div>
 			</a>
 		</div>
 
@@ -262,9 +262,21 @@
 			</div>
 		</div>
 	</div>
-	<div class="popup"></div>
+	<div class="form-popup" id="myForm">
+		<form action="" method="POST" class="form-container">
+			<h1>Login</h1>
+
+			<label for="name"><b>Bvz</b></label>
+			<input type="text" name="name" value="" placeholder="Ваше имя" required>
+
+			<label for="phone"><b>Password</b></label>
+			<input type="tel" name="phone" class="js-phone_mask" value="" placeholder="Телефон" im-insert="true"
+				required="">
+			<button type="submit" class="btn">отправить</button>
+		</form>
+	</div>
 	<script src='js/min.js'></script>
-	<script src='javascripts/jquery.fancybox.min.js'></script>
+	<!-- <script src='javascripts/jquery.fancybox.min.js'></script> -->
 	<!-- <script src='js/wome-work.js'></script> -->
 </body>
 
