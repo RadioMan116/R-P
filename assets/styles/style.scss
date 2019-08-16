@@ -148,11 +148,18 @@ img {
 
 	&__slide {
 
+
 		&-img {
 			// display: flex;
 			// flex-direction: column;
 			// align-items: center;
 		}
+	}
+
+	.swiper-slide {
+		flex-direction: column;
+		display: flex;
+		align-items: center;
 	}
 
 	&__images {
@@ -204,6 +211,7 @@ img {
 
 	.swiper-container {
 		max-width: 100%;
+		width: 100%;
 	}
 }
 
