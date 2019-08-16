@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Получатели, через запятую
-$mailTo = 'noris75564@gmail.com';
+$mailTo = 'ramilzaidullin@mail.ru';
 //$mailCopy = 'copy@test.test';
 
 // Отправитель (Email)

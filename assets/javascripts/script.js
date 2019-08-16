@@ -1,13 +1,5 @@
 $(document).ready(function () {
 
-	$(".main a").on("click", "a", function (event) {
-		event.preventDefault();
-		var id = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({
-			scrollTop: top
-		}, 1500);
-	});
 
 	$("#call").on("click", function (event) {
 		document.getElementById("myForm").style.display = "block";
@@ -37,6 +29,15 @@ $(document).ready(function () {
 			prevEl: '.work-examples .swiper-button-prev',
 		},
 	});
+	var swiper3 = new Swiper('.discount .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		// loop: true,
+		// autoplay: {
+		// 	delay: 500,
+		// 	disableOnInteraction: false,
+		// },
+	});
 
 	$('#myForm form').on('submit', function () {
 
@@ -62,5 +63,26 @@ $(document).ready(function () {
 
 		return false;
 	});
-
+	Inputmask.extendAliases({
+		'customAlias': {
+			mask: "+7 (999) 999-99-99",
+			oncomplete: function () {
+				$(this).removeClass('BadPols');
+			},
+			onincomplete: function () {
+				$(this).addClass('BadPols');
+				$(this).val('');
+			},
+		}
+	});
+	Inputmask("customAlias").mask("[type=tel]");
+	$("[data-scroll]").click(function () {
+		event.preventDefault();
+		var id = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({
+			scrollTop: top
+		}, 1500);
+		return false;
+	})
 });
